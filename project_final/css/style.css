@@ -3,7 +3,6 @@
     --text-dark: #1A1A1A;
     --bg-light-blue: #F1FDFF;
     --bg-light-yellow: #F9FADF;
-    
     --font-heading: 'Oswald', sans-serif;
     --font-main: 'Roboto', sans-serif;
 }
@@ -44,6 +43,7 @@ img {
     background-color: white;
     padding: 1rem 0;
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.05);
+    border: none;
 }
 
 .nav-container {
@@ -96,6 +96,7 @@ img {
 
 .custom-toggler:focus {
     box-shadow: none; 
+    outline: none;
 }
 
 .custom-toggler:hover .hamburger-icon {
@@ -126,6 +127,16 @@ img {
 .btn-light-custom:hover {
     background-color: #EAEAEA !important;
     color: var(--text-dark) !important;
+}
+
+.center-btn-wrapper .custom-btn.active {
+    background-color: var(--primary-cyan) !important;
+    color: var(--text-dark) !important;
+    box-shadow: none !important;
+}
+
+.center-btn-wrapper .custom-btn.active:hover {
+    background-color: #5ecce6 !important;
 }
 
 .hero-section {
@@ -450,8 +461,11 @@ img {
     .custom-toggler {
         display: inline-block !important;
     }
-    #mobileMenu:not(.show) {
+    #mobileMenu:not(.show):not(.collapsing) {
         display: none !important;
+    }
+    #mobileMenu.collapsing {
+        display: block !important;
     }
     #mobileMenu.show {
         display: block !important;
@@ -464,17 +478,13 @@ img {
     #mobileMenu {
         flex-basis: 100%;
         order: 4; 
-        background-color: #FFFFFF;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
-        margin-top: 1rem;
     }
 
     .custom-nav-links {
         display: flex !important;
         flex-direction: column !important;
         gap: 1rem;
+        padding: 1.5rem 0 1rem 0;
     }
 
     .nav-btn {
