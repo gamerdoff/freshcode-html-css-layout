@@ -1,0 +1,556 @@
+:root {
+    --primary-cyan: #7AE5FD;
+    --text-dark: #1A1A1A;
+    --bg-light-blue: #F1FDFF;
+    --bg-light-yellow: #F9FADF;
+    
+    --font-heading: 'Oswald', sans-serif;
+    --font-main: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+h1, h2, h3, .nav-link, .goal-text, .counter {
+    font-family: var(--font-heading);
+}
+
+.main-wrapper {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container-custom {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+.text-justified {
+    text-align: justify;
+}
+
+.custom-nav {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 4rem; 
+    height: auto;
+}
+
+.custom-nav-links {
+    display: flex;
+    gap: 2vw;
+}
+
+.custom-nav-links .nav-link {
+    color: var(--text-dark) !important; 
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.custom-nav-links .nav-link.active {
+    color: var(--primary-cyan) !important;
+    font-weight: 700;
+}
+
+.custom-btn {
+    border-radius: 2rem;
+    padding: 0.8rem 2.5rem;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon {
+    font-size: 2rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.custom-toggler:focus {
+    box-shadow: none; 
+}
+
+.custom-toggler:hover .hamburger-icon {
+    color: var(--primary-cyan);
+    transform: scale(1.1);
+}
+
+.btn-primary-custom,
+.nav-btn,
+.nav-btn:focus,
+.nav-btn.active {
+    background-color: var(--primary-cyan) !important;
+    color: var(--text-dark) !important;
+}
+
+.btn-primary-custom:hover,
+.nav-btn:hover {
+    background-color: #5ecce6 !important;
+    color: var(--text-dark) !important;
+}
+
+.btn-light-custom,
+.btn-light-custom:focus {
+    background-color: #FFFFFF !important;
+    color: var(--text-dark) !important;
+}
+
+.btn-light-custom:hover {
+    background-color: #EAEAEA !important;
+    color: var(--text-dark) !important;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 4vw, 5rem);
+    color: white;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    margin-bottom: 2rem;
+}
+
+.work-section {
+    padding: 6rem 0;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.work-header h2 {
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    font-weight: 400;
+}
+
+.work-header .subtitle {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    margin-top: 1rem;
+}
+
+.highlight-text {
+    color: #73A6B1;
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+    margin-top: 1rem;
+}
+
+.work-card, .mission-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--bg-light-blue);
+    border-radius: 1rem;
+    padding: 3rem 4vw;
+    margin-bottom: 3rem;
+}
+
+.work-card .card-text, 
+.mission-card .card-text {
+    flex: 0 0 45%; 
+}
+
+.work-card .card-img {
+    flex: 0 0 45%; 
+    position: relative;
+    display: block; 
+}
+
+.mission-img-wrapper {
+    flex: 0 0 45%; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-card h3 {
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.work-card p, .mission-text {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    line-height: 1.6;
+}
+
+.work-card .card-img img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.center-btn-wrapper {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.mission-card {
+    margin-top: 4rem;
+}
+
+.mission-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.mission-vector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    max-width: none !important; 
+    z-index: 1;
+    pointer-events: none;
+}
+
+.donate-section {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.donate-section h2 {
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.goal-text {
+    font-size: 1.8rem !important;
+    color: var(--text-dark) !important;
+    margin-top: 3rem;
+}
+
+.counter {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem 0 3rem 0;
+}
+
+.counter .separator {
+    color: #9AD2DE;
+    font-family: var(--font-main);
+    font-weight: 100; 
+}
+
+.contacts-section {
+    background-color: var(--bg-light-yellow);
+    padding: 6rem 0;
+}
+
+.contacts-inner {
+    margin: 0 auto;
+}
+
+.contacts-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 4rem;
+}
+
+.contacts-title {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-title h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+.contacts-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 45%;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 0.5rem; 
+}
+
+.contact-block p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contact-phone {
+    color: #000;
+    font-weight: 900; 
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem; 
+}
+
+.social-icon-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain; 
+}
+
+.subscribe-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 4rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.03);
+}
+
+.form-img {
+    flex: 0 0 45%; 
+    display: flex;
+    justify-content: center;
+}
+
+.form-img img {
+    width: 100%; 
+    height: auto;
+    max-width: none;
+}
+
+.form-content {
+    flex: 0 0 50%; 
+}
+
+.form-content h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    background-color: var(--bg-light-yellow);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.site-footer {
+    background-color: var(--bg-light-blue);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.footer-link {
+    color: var(--primary-cyan);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #5ecce6;
+}
+
+.footer-divider {
+    width: 100px;
+    border: 1px solid var(--primary-cyan);
+    margin: 2rem auto;
+    opacity: 1;
+}
+
+.footer-author {
+    font-size: 1rem !important;
+}
+
+@media (max-width: 992px) {
+    .custom-toggler {
+        display: inline-block !important;
+    }
+    #mobileMenu:not(.show) {
+        display: none !important;
+    }
+    #mobileMenu.show {
+        display: block !important;
+    }
+    
+    .nav-container {
+        flex-wrap: wrap; 
+    }
+    
+    #mobileMenu {
+        flex-basis: 100%;
+        order: 4; 
+        background-color: #FFFFFF;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+        margin-top: 1rem;
+    }
+
+    .custom-nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        margin-right: 1rem !important;
+    }
+
+    .work-card, .mission-card {
+        gap: 3rem;
+    }
+    .contacts-header-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .contacts-title {
+        width: 100%;
+        justify-content: center;
+    }
+    .contacts-details {
+        width: 100%;
+        align-items: center; 
+    }
+    .contact-block {
+        align-items: center;
+        text-align: center;
+    }
+    .subscribe-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .form-img, .form-content {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    .form-img img {
+        max-width: 300px;
+    }
+    .hero-content {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 45%; 
+        left: 5%;
+        text-shadow: none; 
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1rem, 3.5vw, 2rem);
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-content p {
+        font-size: clamp(0.7rem, 2vw, 1rem);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .work-card, .mission-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .work-card .card-text, .mission-card .card-text,
+    .work-card .card-img, .mission-img-wrapper {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    .work-card .card-img, .mission-img-wrapper {
+        order: -1;
+    }
+    .text-justified {
+        text-align: left; 
+    }
+}
